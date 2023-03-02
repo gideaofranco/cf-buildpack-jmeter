@@ -67,7 +67,8 @@ then
     cd $CACHE_DIR && wget $JDK_BLOB
     cd $OLDPWD
   fi
-  tar -xzf $CACHE_DIR/$JDK -C $BUILD_DIR/local/jdk
+  tar -xzf $CACHE_DIR/$JDK -C
+  mv $BUILD_DIR/local/jdk/jre8u352/ $BUILD_DIR/local/jdk/
 fi
 
 # Move the app into position

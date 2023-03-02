@@ -1,0 +1,12 @@
+applications:
+  - name: jmeter-server-01-i539859
+    instances: 1
+    memory: 1G
+    disk_quota: 1G
+    no-route: true
+    health-check-type: none
+    buildpack: https://github.com/gideaofranco/cf-buildpack-jmeter.git
+    stack: cflinuxfs2
+    env:
+      LOAD_SCRIPT: portfolio-load.jmx
+      TEST_URL: portfolio-s1p12.cfapps.io
